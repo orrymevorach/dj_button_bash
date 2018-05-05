@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 3</title>
+    <style>
+/*     
+    
+    .drumSounds,
+    .djSounds {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    body {
+        background: black;
+        font-family: sans-serif;
+    }
+
+    .button {
+        width: 120px;
+        height: 120px;
+        margin: 0 25px;
+    }
+
+    p {
+        color: rgba(255,255,255,0.6);
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 26px;
+    }
+
+    p:first-of-type {
+        padding-top: 20px;
+    }
+
+    .drumSounds {
+        margin-bottom: 120px;
+    }
+
+    .hiHat {
+        background: rgb(0,170,255);
+    }
+    .snare {
+        background: rgb(170,0,255);
+    }
+    .bass {
+        background: rgb(255,0,170)
+    }
+    .tom1 {
+        background: rgb(255,170,0)
+    }
+    .tom2 {
+        background: rgb(170,255,0);
+    }
+    .floorTom {
+        background: yellow;
+    }
+
+    .scratch {
+        background: red;
+    }
+
+    .drumLoop1 {
+        background: rebeccapurple;
+    }
+
+    form {
+        width: 25px;
+        margin: 0 auto;
+    } */
+
+    body {
+            font-family: sans-serif;
+            background: black;
+        }
+
+        .highlight {
+           box-shadow: 0px 0px 10px 10px rgba(255,255,255,0.8);
+    }
+
+        .wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .numbers,
+        .top-row,
+        .middle-row,
+        .bottom-row,
+        .bottom-special {
+            display: flex;
+        }
+        
+        .square {
+            width: 60px;
+        }
+
+        .button {
+            background: red;
+            margin: 7px;
+            height: 60px;
+        }
+
+        .tab,
+        .delete {
+            width: 80px;
+        }
+
+        .caps,
+        .enter {
+            width: 114px;
+            height: 60px;
+        }
+
+        .shift {
+            width: 144px;
+        }
+
+        .cmd {
+            width: 70px;
+        }
+
+        .space {
+            width: 425px;
+            margin-left: 315px;
+        }
+
+        div p:first-child {
+            margin: 0;
+            padding: 3px 0 0 3px;
+        }
+
+        .drumloop {
+            background: rgb(170,255,0);
+        }
+
+        .guitarloop {
+            background-color: rgb(255,0,170);
+        }
+
+        .dj {
+            background-color: rgb(0,170,255);
+        }
+
+        .drum-sounds {
+            background-color: rgb(255,170,0)
+        }
+
+    
+    </style>
+</head>
+<body>
+
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+        crossorigin='anonymous'></script>
+
+        <div class="wrapper">
+            <div class="numbers">
+                <div class="square button drumloop drumloop1">
+                    <p>TAB</p>
+                    <p></p>
+                </div>
+                <div class="square button drumloop drumloop2">
+                    <p>Q</p>
+                    <p></p>
+                </div>
+                <div class="square button drumloop drumloop3">
+                    <p>W</p>
+                    <p></p>
+                </div>
+                <div class="square button drumloop drumloop4">
+                    <p>E</p>
+                    <p></p>
+                </div>
+                <div class="square button drumloop drumloop5">
+                    <p>R</p>
+                    <p></p>
+                </div>
+                <div class="square button drumloop drumloop6">
+                    <p>T</p>
+                    <p></p>
+                </div>
+                <div class="square button drumloop drumloop7">
+                    <p>Y</p>
+                    <p></p>
+                </div>
+                <div class="square button guitarloop guitarloop1">
+                    <p>U</p>
+                    <p></p>
+                </div>
+                <div class="square button guitarloop guitarloop2">
+                    <p>I</p>
+                    <p></p>
+                </div>
+                <div class="square button guitarloop guitarloop3">
+                    <p>O</p>
+                    <p></p>
+                </div>
+                <div class="square button guitarloop guitarloop4">
+                    <p>P</p>
+                    <p></p>
+                </div>
+                <div class="square button guitarloop guitarloop5">
+                    <p>[</p>
+                    <p></p>
+                </div>
+                <div class="square button guitarloop guitarloop6">
+                    <p>]</p>
+                    <p></p>
+                </div>
+                <div class="delete button guitarloop guitarloop7">
+                    <p>\</p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="top-row">
+                <div class="tab button">
+                    <p>TAB</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>Q</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>W</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>E</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>R</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>T</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>Y</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>U</p>
+                    <p></p>
+                </div>
+                <div class="square button dj bubbles">
+                    <p>I</p>
+                    <p></p>
+                </div>
+                <div class="square button dj clap">
+                    <p>O</p>
+                    <p></p>
+                </div>
+                <div class="square button dj clay">
+                    <p>P</p>
+                    <p></p>
+                </div>
+                <div class="square button dj spiral">
+                    <p>[</p>
+                    <p></p>
+                </div>
+                <div class="square button dj lazer">
+                    <p>]</p>
+                    <p></p>
+                </div>
+                <div class="square button dj moon">
+                    <p>\</p>
+                    <p></p>
+                </div>
+            </div>
+        
+            <div class="middle-row">
+                <div class="caps"></div>
+                <div class="button square drum-sounds bass">
+                    <p>A</p>
+                    <p></p>
+                </div>
+                <div class="button square drum-sounds snare">
+                    <p>S</p>
+                    <p></p>
+                </div>
+                <div class="button square drum-sounds">
+                    <p>D</p>
+                    <p></p>
+                </div>
+                <div class="button square drum-sounds">
+                    <p>F</p>
+                    <p></p>
+                </div>
+                <div class="button square drum-sounds">
+                    <p>G</p>
+                    <p></p>
+                </div>
+                <div class="button square drum-sounds">
+                    <p>H</p>
+                    <p></p>
+                </div>
+                <div class="button square dj pinwheel">
+                    <p>J</p>
+                    <p></p>
+                </div>
+                <div class="button square dj scratch">
+                    <p>K</p>
+                    <p></p>
+                </div>
+                <div class="button square dj strike">
+                    <p>L</p>
+                    <p></p>
+                </div>
+                <div class="button square dj veil">
+                    <p>;</p>
+                    <p></p>
+                </div>
+                <div class="button square dj">
+                    <p>'</p>
+                    <p></p>
+                </div>
+                <div class="button enter">
+                    <p>ENTER</p>
+                    <p></p>
+                </div>
+            </div>
+        
+            <div class="bottom-row">
+                <div class="shift button">
+                    <p>SHIFT</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>Z</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>X</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>C</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>V</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>B</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>N</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>M</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>,</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>.</p>
+                    <p></p>
+                </div>
+                <div class="square button">
+                    <p>/</p>
+                    <p></p>
+                </div>
+                <div class="shift button">
+                    <p>SHIFT</p>
+                    <p></p>
+                </div>
+            </div>
+        
+            <div class="bottom-special">
+        
+                <div class="space button applause">
+                    <p>SPACE</p>
+                    <p></p>
+                </div>
+        
+            </div>
+        </div>
+        <!-- Closing Wrapper -->
+
+    <!-- Drum Loops -->
+    <audio data-key="9" data-instrument="drumloop1" src="Drum_Loops/drumloop1.mp3"></audio>
+    <audio data-key="81" data-instrument="drumloop2" src="Drum_Loops/drumloop10.mp3"></audio>
+    <audio data-key="87" data-instrument="drumloop3" src="Drum_Loops/drumloop2.mp3"></audio>
+    <audio data-key="69" data-instrument="drumloop4" src="Drum_Loops/drumloop3.mp3"></audio>
+    <audio data-key="82" data-instrument="drumloop5" src="Drum_Loops/drumloop4.mp3"></audio>
+    <audio data-key="84" data-instrument="drumloop6" src="Drum_Loops/drumloop5.mp3"></audio>
+    <audio data-key="54" data-instrument="drumloop7" src="Drum_Loops/drumloop6.mp3"></audio>
+
+    <!-- Guitar Loops -->
+    <audio data-key="55" data-instrument="guitarloop1" src="Guitar_Loops/guitarloop1.mp3"></audio>
+    <audio data-key="56" data-instrument="guitarloop2" src="Guitar_Loops/guitarloop10.mp3"></audio>
+    <audio data-key="57" data-instrument="guitarloop3" src="Guitar_Loops/guitarloop4.mp3"></audio>
+    <audio data-key="48" data-instrument="guitarloop4" src="Guitar_Loops/guitarloop5b.mp3"></audio>
+    <audio data-key="173" data-instrument="guitarloop5" src="Guitar_Loops/guitarloop6b.mp3"></audio>
+    <audio data-key="61" data-instrument="guitarloop6" src="Guitar_Loops/guitarloop8.mp3"></audio>
+    <audio data-key="8" data-instrument="guitarloop7" src="Guitar_Loops/guitarloop9.mp3"></audio>
+
+    <!-- Individual Drum Sounds -->
+    <audio data-key="65" data-instrument="bass" src="Kit_4_Electro/CYCdh_ElecK01-Kick02.wav"></audio>
+    <audio data-key="83" data-instrument="snare"src="Kit_4_Electro/CYCdh_ElecK01-Snr03.wav"></audio>
+    
+    <!-- Sound Effects -->
+    <audio data-key="32" data-instrument="applause" src="Sound_Effects/auditorium.mp3"></audio>
+    <audio data-key="73" data-instrument="bubbles" src="Sound_Effects/bubbles.mp3"></audio>
+    <audio data-key="79" data-instrument="clap" src="Sound_Effects/clap.wav"></audio>
+    <audio data-key="80" data-instrument="clay" src="Sound_Effects/clay.mp3"></audio>
+    <audio data-key="219" data-instrument="spiral" src="Sound_Effects/dotted-spiral.mp3"></audio>
+    <audio data-key="221" data-instrument="lazer" src="Sound_Effects/lazer.mp3"></audio>
+    <audio data-key="220" data-instrument="moon" src="Sound_Effects/moon.mp3"></audio>
+    <audio data-key="74" data-instrument="pinwheel" src="Sound_Effects/pinwheel.mp3"></audio>
+    <audio data-key="75" data-instrument="scratch" src="Sound_Effects/scratch.mp3"></audio>
+    <audio data-key="76" data-instrument="strike" src="Sound_Effects/strike.mp3"></audio>
+    <audio data-key="59" data-instrument="veil" src="Sound_Effects/veil.mp3"></audio>
+    <audio data-key="" data-instrument="" src=""></audio>
+    
+    
+    
+    <script>
+    
+    $(function() {
+
+        $(document).on('keydown', function(e){
+            
+            // create a variable that gets the sound associated with each data-key
+            const selectedSound = document.querySelector(`audio[data-key="${e.which}"]`);
+            
+            // if button is clicked with no associated sound, do nothing.
+            if (!selectedSound) return; 
+            
+            // rewinds each track as soon as it starts so it can be replayed
+            selectedSound.pause();
+            selectedSound.currentTime = 0;
+            
+
+            // create a variable that gets the data (aka css values) of the divs with the class instrument
+            const instrument = $(selectedSound).data('instrument');
+
+            // creating a function that when each key is hit, toggle the class 'highlight'
+            // storing the function in a variable called highlight to be re-used in the timeout function below
+            // calling the function
+             const highlight = function() {
+                 $(`.${instrument}`).toggleClass("highlight");            
+             };
+             highlight();
+            
+            // set a timeout function for the highlight
+            setTimeout(function() {
+                highlight();
+            },150) // highlight times out after 150 milliseconds
+            
+            // if statements that:
+            // if button is pressed and loop = false, loop will = true
+            // else (if) loop is false, leave it at false
+            // set time on each track to 60 seconds which is longer than any track so that it doesnt repeat itself
+            if (e.which === 192) {
+                const drumloop1 = document.querySelector(`audio[data-key="192"]`);
+                if (drumloop1.loop === false) {
+                    drumloop1.loop = true;
+                    highlight();
+                }
+                else {
+                    drumloop1.loop = false;
+                    drumloop1.pause();
+                    drumloop1.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+            if (e.which === 49) {
+                const drumloop2 = document.querySelector(`audio[data-key="49"]`);
+                if (drumloop2.loop === false) {
+                    drumloop2.loop = true;
+                    highlight();
+                }
+                else {
+                    drumloop2.loop = false;
+                    drumloop2.pause();
+                    drumloop2.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+            if (e.which === 50) {
+                const drumloop3 = document.querySelector(`audio[data-key="50"]`);
+                if (drumloop3.loop === false) {
+                    drumloop3.loop = true;
+                    highlight();
+                }
+                else {
+                    drumloop3.loop = false;
+                    drumloop3.pause();
+                    drumloop3.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+            if (e.which === 51) {
+                const drumloop4 = document.querySelector(`audio[data-key="51"]`);
+                if (drumloop4.loop === false) {
+                    drumloop4.loop = true;
+                    highlight();
+                }
+                else {
+                    drumloop4.loop = false;
+                    drumloop4.pause();
+                    drumloop4.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+            if (e.which === 52) {
+                const drumloop1 = document.querySelector(`audio[data-key="52"]`);
+                if (drumloop5.loop === false) {
+                    drumloop5.loop = true;
+                    highlight();
+                }
+                else {
+                    drumloop5.loop = false;
+                    drumloop5.pause();
+                    drumloop5.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+            if (e.which === 53) {
+                const drumloop6 = document.querySelector(`audio[data-key="53"]`);
+                if (drumloop6.loop === false) {
+                    drumloop6.loop = true;
+                    highlight();
+                }
+                else {
+                    drumloop6.loop = false;
+                    drumloop6.pause();
+                    drumloop6.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+            if (e.which === 54) {
+                const drumloop7 = document.querySelector(`audio[data-key="54"]`);
+                if (drumloop7.loop === false) {
+                    drumloop7.loop = true;
+                    highlight();
+                }
+                else {
+                    drumloop7.loop = false;
+                    drumloop7.pause();
+                    drumloop7.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+            if (e.which === 55) {
+                const guitarloop1 = document.querySelector(`audio[data-key="55"]`);
+                if (guitarloop1.loop === false) {
+                    guitarloop1.loop = true;
+                    highlight();
+                }
+                else {
+                    guitarloop1.loop = false;
+                    guitarloop1.pause();
+                    guitarloop1.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+            if (e.which === 56) {
+                const guitarloop2 = document.querySelector(`audio[data-key="56"]`);
+                if (guitarloop2.loop === false) {
+                    guitarloop2.loop = true;
+                    highlight();
+                }
+                else {
+                    guitarloop2.loop = false;
+                    guitarloop2.pause();
+                    guitarloop2.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+            if (e.which === 57) {
+                const guitarloop3 = document.querySelector(`audio[data-key="57"]`);
+                if (guitarloop3.loop === false) {
+                    guitarloop3.loop = true;
+                    highlight();
+                }
+                else {
+                    guitarloop3.loop = false;
+                    guitarloop3.pause();
+                    guitarloop3.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+            if (e.which === 48) {
+                const guitarloop4 = document.querySelector(`audio[data-key="48"]`);
+                if (guitarloop4.loop === false) {
+                    guitarloop4.loop = true;
+                    highlight();
+                }
+                else {
+                    guitarloop4.loop = false;
+                    guitarloop4.pause();
+                    guitarloop4.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+            if (e.which === 173) {
+                const guitarloop5 = document.querySelector(`audio[data-key="173"]`);
+                if (guitarloop5.loop === false) {
+                    guitarloop5.loop = true;
+                    highlight();
+                }
+                else {
+                    guitarloop5.loop = false;
+                    guitarloop5.pause();
+                    guitarloop5.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+            if (e.which === 61) {
+                const guitarloop6 = document.querySelector(`audio[data-key="61"]`);
+                if (guitarloop6.loop === false) {
+                    guitarloop6.loop = true;
+                    highlight();
+                }
+                else {
+                    guitarloop6.loop = false;
+                    guitarloop6.pause();
+                    guitarloop6.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+            if (e.which === 8) {
+                const guitarloop7 = document.querySelector(`audio[data-key="8"]`);
+                if (guitarloop7.loop === false) {
+                    guitarloop7.loop = true;
+                    highlight();
+                }
+                else {
+                    guitarloop7.loop = false;
+                    guitarloop7.pause();
+                    guitarloop7.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+            
+            // auditorium clapping / space bar
+            if (e.which === 32) {
+                const auditorium = document.querySelector(`audio[data-key="32"]`);
+                if (auditorium.loop === false) {
+                    auditorium.loop = true;
+                    highlight();
+                }
+                else {
+                    auditorium.loop = false;
+                    auditorium.pause();
+                    auditorium.currentTime = 60;
+                    setTimeout(function () {
+                        highlight();
+                    }, 0)
+                }
+            }
+
+
+
+            // plays the selected sound when the function is called
+            return selectedSound.play();
+             
+        });
+        
+    });
+    
+
+
+        
+    </script>
+
+
+
+
+</body>
+
+</html>
