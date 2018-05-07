@@ -4,274 +4,210 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project 3</title>
-    <style>
-
-
-        body {
-            font-family: sans-serif;
-            background: black;
-        }
-
-        .highlight {
-           box-shadow: 0px 0px 10px 10px rgba(255,255,255,0.8);
-    }
-
-        .wrapper {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        
-        .top-row,
-        .middle-row,
-        .bottom-row,
-        .bottom-special {
-            display: flex;
-        }
-        
-        .square {
-            width: 60px;
-        }
-
-        .button {
-            background: red;
-            margin: 7px;
-            height: 60px;
-        }
-
-        .tab,
-        .delete {
-            width: 80px;
-        }
-
-        .caps,
-        .enter {
-            width: 114px;
-            height: 60px;
-        }
-
-        .shift {
-            width: 144px;
-        }
-
-        .cmd {
-            width: 70px;
-        }
-
-        .space {
-            width: 425px;
-            margin-left: 315px;
-        }
-
-        div p:first-child {
-            margin: 0;
-            padding: 3px 0 0 3px;
-            color: rgba(0,0,0,0.3);
-        }
-
-        .drumloop {
-            background: rgb(170,255,0);
-        }
-
-        .guitarloop {
-            background-color: rgb(255,0,170);
-        }
-
-        .dj {
-            background-color: rgb(0,170,255);
-        }
-
-        .drum-sounds {
-            background-color: rgb(255,170,0)
-        }
-
-        .hihat {
-            background-color: yellow;
-        }
-
-    </style>
+    <title>DJ Danny Pack</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+    <!-- Loading in jQuery -->
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <div class="wrapper"> <!-- Opening Wrapper to Center and Contain Buttons -->
+        <div class="buttons-container-large"> <!-- Opening Buttons to Position at the Bottom -->
+            <div class="buttons-container-small">
 
-    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
-        crossorigin='anonymous'></script>
-
-        <div class="wrapper">
             
-            <div class="top-row">
-                <div class="tab"></div>
-                <div class="square button drumloop drumloop1">
-                    <p>Q</p>
-                    <p></p>
-                </div>
-                <div class="square button drumloop drumloop2">
-                    <p>W</p>
-                    <p></p>
-                </div>
-                <div class="square button drumloop drumloop3">
-                    <p>E</p>
-                    <p></p>
-                </div>
-                <div class="square button drumloop drumloop4">
-                    <p>R</p>
-                    <p></p>
-                </div>
-                <div class="square button drumloop drumloop5">
-                    <p>T</p>
-                    <p></p>
-                </div>
-                <div class="square button drumloop drumloop6">
-                    <p>Y</p>
-                    <p></p>
-                </div>
-                <div class="square button drumloop drumloop7">
-                    <p>U</p>
-                    <p></p>
-                </div>
-                <div class="square button guitarloop guitarloop1">
-                    <p>I</p>
-                    <p></p>
-                </div>
-                <div class="square button guitarloop guitarloop2">
-                    <p>O</p>
-                    <p></p>
-                </div>
-                <div class="square button guitarloop guitarloop3">
-                    <p>P</p>
-                    <p></p>
-                </div>
-                <div class="square button guitarloop guitarloop4">
-                    <p>[</p>
-                    <p></p>
-                </div>
-                <div class="square button guitarloop guitarloop5">
-                    <p>]</p>
-                    <p></p>
-                </div>
-                <div class="square button guitarloop guitarloop6">
-                    <p>\</p>
-                    <p></p>
-                </div>
-            </div>
+            
+                <div class="top-row"> <!-- Opening Top Row -->
+                    <!-- Drum Loops -->
+                    <div class="buttons-green">
+                        <div class="square button drumloop drumloop1">
+                            <p>Q</p>
+                            <p></p>
+                        </div>
+                        
+                        <div class="square button drumloop drumloop2">
+                            <p>W</p>
+                            <p></p>
+                        </div>
+                        <div class="square button drumloop drumloop3">
+                            <p>E</p>
+                            <p></p>
+                        </div>
+                        <div class="square button drumloop drumloop4">
+                            <p>R</p>
+                            <p></p>
+                        </div>
+                        <div class="square button drumloop drumloop5">
+                            <p>T</p>
+                            <p></p>
+                        </div>
+                        <div class="square button drumloop drumloop6">
+                            <p>Y</p>
+                            <p></p>
+                        </div>
+                        <div class="square button drumloop drumloop7">
+                            <p>U</p>
+                            <p></p>
+                        </div>
+                    </div> <!-- Closing Buttons-Green -->
+                    
+                    <div class="buttons-pink">
+                        <!-- Guitar Loops -->
+                        <div class="square button guitarloop guitarloop1">
+                            <p>I</p>
+                            <p></p>
+                        </div>
+                        <div class="square button guitarloop guitarloop2">
+                            <p>O</p>
+                            <p></p>
+                        </div>
+                        <div class="square button guitarloop guitarloop3">
+                            <p>P</p>
+                            <p></p>
+                        </div>
+                        <div class="square button guitarloop guitarloop4">
+                            <p>[</p>
+                            <p></p>
+                        </div>
+                        <div class="square button guitarloop guitarloop5">
+                            <p>]</p>
+                            <p></p>
+                        </div>
+                        <div class="square button guitarloop guitarloop6">
+                            <p>\</p>
+                            <p></p>
+                        </div>
+                    </div> <!-- Closing Buttons-Pink -->
+                </div> <!-- Closing Top Row -->
+            
+                <div class="middle-row"> <!-- Oening Middle Row -->
+                    <div class="buttons-orange">
+                        <!-- Individual Drum Sounds -->
+                        <div class="button square drum-sounds bass">
+                            <p>A</p>
+                            <p></p>
+                        </div>
+                        <div class="button square drum-sounds snare">
+                            <p>S</p>
+                            <p></p>
+                        </div>
+                        <div class="button square drum-sounds">
+                            <p>D</p>
+                            <p></p>
+                        </div>
+                        <div class="button square drum-sounds">
+                            <p>F</p>
+                            <p></p>
+                        </div>
+                        <div class="button square drum-sounds">
+                            <p>G</p>
+                            <p></p>
+                        </div>
+                        <div class="button square drum-sounds">
+                            <p>H</p>
+                            <p></p>
+                        </div>
+                    </div> <!-- Closing Buttons Orange -->
+                    
+                    <div class="buttons-blue-top">
+                        <!-- DJ Sounds -->
+                        <div class="button square dj bubbles">
+                            <p>J</p>
+                            <p></p>
+                        </div>
+                        <div class="button square dj clap">
+                            <p>K</p>
+                            <p></p>
+                        </div>
+                        <div class="button square dj clay">
+                            <p>L</p>
+                            <p></p>
+                        </div>
+                        <div class="button square dj spiral">
+                            <p>;</p>
+                            <p></p>
+                        </div>
+                        <div class="button square dj lazer">
+                            <p>'</p>
+                            <p></p>
+                        </div>
+                        <div class="button enter special">
+                            <p>ENTER</p>
+                            <p></p>
+                        </div>
+                    </div> <!-- Closing Buttons Blue Top -->
+                </div> <!-- Closing Middle Row -->
+            
+                <div class="bottom-row"> <!-- Opening Bottom Row -->
+                    <div class="buttons-yellow">
+                        <!-- Hi Hat Loops -->
+                        <div class="square button hihat hihat1">
+                            <p>Z</p>
+                            <p></p>
+                        </div>
+                        <div class="square button hihat hihat2">
+                            <p>X</p>
+                            <p></p>
+                        </div>
+                        <div class="square button hihat hihat3">
+                            <p>C</p>
+                            <p></p>
+                        </div>
+                        <div class="square button hihat hihat4">
+                            <p>V</p>
+                            <p></p>
+                        </div>
+                    </div> <!-- Closing Buttons Yellow -->
+                    <div class="buttons-blue-bottom">
+                        <!-- DJ Sounds Continued -->
+                        <div class="square button dj moon">
+                            <p>B</p>
+                            <p></p>
+                        </div>
+                        <div class="square button dj pinwheel">
+                            <p>N</p>
+                            <p></p>
+                        </div>
+                        <div class="square button dj scratch">
+                            <p>M</p>
+                            <p></p>
+                        </div>
+                        <div class="square button dj strike">
+                            <p>,</p>
+                            <p></p>
+                        </div>
+                        <div class="square button dj veil">
+                            <p>.</p>
+                            <p></p>
+                        </div>
+                        <div class="square button dj corey">
+                            <p>/</p>
+                            <p></p>
+                        </div>
+                        <div class="shift button drum-sounds singlehihat special">
+                            <p>SHIFT</p>
+                            <p></p>
+                        </div>
+                    </div> <!-- Closing Buttons Blue Bottom -->
+                </div> <!-- CLosing Bottom Row -->
+            
+                <!-- Spacebar -->
+                <div class="bottom-special">
+                    <div class="space button applause special">
+                        <p>SPACE</p>
+                        <p></p>
+                    </div>
+                </div> <!-- Closing Spacebar -->
+            </div> <!-- Closing Buttons Container Small -->
+
+        </div> <!-- Closing Buttons Container Large -->
+    </div> <!-- Closing Wrapper -->
         
-            <div class="middle-row">
-                <div class="caps"></div>
-                <div class="button square drum-sounds bass">
-                    <p>A</p>
-                    <p></p>
-                </div>
-                <div class="button square drum-sounds snare">
-                    <p>S</p>
-                    <p></p>
-                </div>
-                <div class="button square drum-sounds">
-                    <p>D</p>
-                    <p></p>
-                </div>
-                <div class="button square drum-sounds">
-                    <p>F</p>
-                    <p></p>
-                </div>
-                <div class="button square drum-sounds">
-                    <p>G</p>
-                    <p></p>
-                </div>
-                <div class="button square drum-sounds">
-                    <p>H</p>
-                    <p></p>
-                </div>
-                <div class="button square dj bubbles">
-                    <p>J</p>
-                    <p></p>
-                </div>
-                <div class="button square dj clap">
-                    <p>K</p>
-                    <p></p>
-                </div>
-                <div class="button square dj clay">
-                    <p>L</p>
-                    <p></p>
-                </div>
-                <div class="button square dj spiral">
-                    <p>;</p>
-                    <p></p>
-                </div>
-                <div class="button square dj lazer">
-                    <p>'</p>
-                    <p></p>
-                </div>
-                <div class="button enter">
-                    <p>ENTER</p>
-                    <p></p>
-                </div>
-            </div>
-        
-            <div class="bottom-row">
-                <div class="shift button drum-sounds singlehihat">
-                    <p>SHIFT</p>
-                    <p></p>
-                </div>
-                <div class="square button hihat hihat1">
-                    <p>Z</p>
-                    <p></p>
-                </div>
-                <div class="square button hihat hihat2">
-                    <p>X</p>
-                    <p></p>
-                </div>
-                <div class="square button hihat hihat3">
-                    <p>C</p>
-                    <p></p>
-                </div>
-                <div class="square button hihat hihat4">
-                    <p>V</p>
-                    <p></p>
-                </div>
-                <div class="square button dj moon">
-                    <p>B</p>
-                    <p></p>
-                </div>
-                <div class="square button dj pinwheel">
-                    <p>N</p>
-                    <p></p>
-                </div>
-                <div class="square button dj scratch">
-                    <p>M</p>
-                    <p></p>
-                </div>
-                <div class="square button dj strike">
-                    <p>,</p>
-                    <p></p>
-                </div>
-                <div class="square button dj veil">
-                    <p>.</p>
-                    <p></p>
-                </div>
-                <div class="square button dj corey">
-                    <p>/</p>
-                    <p></p>
-                </div>
-                <div class="shift button drum-sounds singlehihat">
-                    <p>SHIFT</p>
-                    <p></p>
-                </div>
-            </div>
-        
-            <div class="bottom-special">
-        
-                <div class="space button applause">
-                    <p>SPACE</p>
-                    <p></p>
-                </div>
-        
-            </div>
-        </div>
-        <!-- Closing Wrapper -->
 
     <!-- Drum Loops 
         Q W E R T Y U 
      -->
-    <audio data-key="81" data-instrument="drumloop1" src="Drum_Loops/drumloop1.mp3"></audio>
+    <audio data-key="81" data-instrument="drumloop1" class="dl1" src="Drum_Loops/drumloop1.mp3"></audio>
     <audio data-key="87" data-instrument="drumloop2" src="Drum_Loops/drumloop2.mp3"></audio>
     <audio data-key="69" data-instrument="drumloop3" src="Drum_Loops/drumloop3.mp3"></audio>
     <audio data-key="82" data-instrument="drumloop4" src="Drum_Loops/drumloop4.mp3"></audio>
@@ -331,6 +267,7 @@
             
             // create a dynamic variable that gets the sound associated with each data-key
             const selectedSound = document.querySelector(`audio[data-key="${e.which}"]`);
+            console.log(selectedSound);
             
             // if button is clicked with no associated sound, do nothing.
             if (!selectedSound) return; 
@@ -646,17 +583,41 @@
                 }
             }
 
-
-
             // plays the selected sound when the function is called
             return selectedSound.play();
              
-        });
-        
-    });
-    
+        })
 
+        // $('.button').on('click', function(e){ 
+        //  // create a dynamic variable that gets the sound associated with each data-key
+        //  const selectedSound = document.querySelector(`.dl1`); 
+        //  console.log(selectedSound); 
+        //  // if button is clicked with no associated sound, do nothing.
+        //  if (!selectedSound) return; 
+        //  // rewinds each track as soon as it starts so it can be replayed immediately 
+        //  selectedSound.pause(); 
+        //  selectedSound.currentTime = 0; 
+        //  // create a variable that gets the data of the divs with the class instrument 
+        //  const instrument = $(selectedSound).data('instrument'); 
+        //  // creating a function so that when each key is hit, toggle the class 'highlight' 
+        //  const highlight = function () { 
+        //      $(`.${instrument}`).toggleClass("highlight");
+        //     }; 
+        //     highlight(); 
+        //     // set a timeout function for the highlight after 150 milliseconds 
+        //     setTimeout(function
+        //     () { highlight(); }, 150) 
+        //     return selectedSound.play();
+        // });
 
+    //    $('.button').on('click', function(e){
+    //        const selectedSound = document.querySelector(`audio[data-key='${e.which}']`)
+    //        console.log(selectedSound);
+    //        return selectedSound.play()
+           
+    //    }) 
+
+    }); // Closing the document ready
         
     </script>
 
