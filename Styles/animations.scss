@@ -1,0 +1,108 @@
+.animation {
+    height: 20px;
+    opacity: 0.8;
+}
+.animation-green {
+    background: rgb(170,255,0);
+    width: 220px;
+    animation: green-bars 3s linear infinite;
+}
+.animation-pink {
+    background-color: rgb(255,0,170);
+    width: 140px;
+    animation: pink-bars 3s linear infinite;
+}
+
+.animation-orange {
+    background-color: rgb(255,170,0);
+    width: 140px;
+    animation: orange-bars 3s linear infinite;
+}
+.animation-blue-left {
+    background-color: rgb(0,170,255);
+    width: 100px;
+    animation: blue-left-bars 3s linear infinite;
+}
+.animation-yellow {
+    background-color: yellow;
+    width: 60px;
+    animation: yellow-bars 3s linear infinite;
+}
+.animation-blue-right {
+    background-color: rgb(0,170,255);
+    width: 140px;
+    animation: blue-right-bars 3s linear infinite;
+}
+
+    
+@keyframes green-bars {
+    0% {
+        width: 220px;
+    }
+    50% {
+        width: 100px;
+    }
+
+    100% {
+        width: 220px;
+    }
+}
+
+@keyframes pink-bars {
+    0% {
+        width: 140px;
+    }
+    50% {
+        width: 220px;
+    }
+    100% {
+        width: 140px;
+    }
+}
+
+@keyframes orange-bars {
+    0% {
+        width: 140px;
+    }
+    50% {
+        width: 80px;
+    }
+    100% {
+        width: 140px;
+    }
+}
+
+@keyframes blue-left-bars {
+    0% {
+       width: 100px;
+    }
+    50% {
+        width: 130px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+@keyframes yellow-bars {
+      0% {
+        width: 60px;
+    }
+    50% {
+        width: 220px;
+    }
+    100% {
+        width: 60px;
+    }
+}
+@keyframes blue-right-bars {
+    0% {
+       width: 120px;
+    }
+    50% {
+        width: 180px;
+    }
+    100% {
+        width: 120px;
+    }
+}

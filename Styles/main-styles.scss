@@ -1,0 +1,172 @@
+body {
+    font-family: sans-serif;
+    background-color: black;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.0)), url(../images/audience.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header-text h1 {
+    font-family: 'Hind', sans-serif;
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    position: relative;
+    top: 5%;
+    text-shadow: 0px 0px 10px white;
+}
+
+/* Hiding the Container Text at Full Size. Will appear later on resize  */
+.container-text {
+    display: none;
+}
+
+/* Styling Container holding all the buttons */
+.buttons-container-large {
+    position: absolute;
+    bottom: 50px;
+    background: rgba(0,0,0,0.7);
+    padding: 50px;
+    margin: 0 10px;
+    box-shadow: 0px 0px 10px 10px white;
+}
+
+/* Arranging buttons in a row */
+.top-row,
+.middle-row,
+.bottom-row,
+.bottom-special,
+.buttons-green,
+.buttons-pink,
+.buttons-orange,
+.buttons-blue-top,
+.buttons-yellow,
+.buttons-blue-bottom {
+    display: flex;
+}
+
+/* Styling and arranging all buttons to look like a keyboard */
+.middle-row {
+    margin-left: 20px;
+}
+
+.bottom-row {
+    margin-left: 50px;;
+}
+
+.square {
+    width: 60px;
+}
+
+.button {
+    margin: 7px;
+    height: 60px;
+    transition: 0.1s;
+}
+
+/* Delete Button */
+.delete {
+    width: 80px;
+}
+
+/* Enter Button */
+.enter {
+    width: 114px;
+    height: 60px;
+    background-color: red;
+}
+
+/* Shift Button */
+.shift {
+    width: 158px;
+}
+
+/* Styling Small Letters On Each Button */
+div p:first-child {
+    margin: 0;
+    padding: 3px 0 0 3px;
+    color: rgba(0,0,0,0.3);
+}
+
+div p:nth-child(2) {
+    color: rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative;
+    padding-top: 13px;
+    font-size: 12px;
+
+}
+div p:nth-child(2):before {
+    content: '';
+    width: 40px;
+    border-top: 1px dashed rgba(0,0,0,0.2);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loop-icon {
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling Looping Icons inside buttons */
+.drumloop img,
+.guitarloop img,
+.hihat img {
+    width: 40px;
+    display: inline-block;
+    opacity: 0.1;
+    margin-top: -6px;
+}
+
+.applause {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.applause img {
+    width: 40px;
+    margin-left: -10px;
+}
+
+.drumloop {
+    background: rgb(170,255,0);
+}
+
+.guitarloop {
+    background-color: rgb(255,0,170);
+}
+
+.dj {
+    background-color: rgb(0,170,255);
+}
+
+.drum-sounds {
+    background-color: rgb(255,170,0)
+}
+
+.hihat {
+    background-color: yellow;
+}
+
+/* Styling Highlight Function for when button is pressed */
+.highlight {
+    box-shadow: 0px 0px 10px 10px rgba(255,255,255,0.8);
+    transform: scale(1.1);
+}
+
+.animation-container {
+    position: absolute;
+    left: 0;
+    top: 26%;
+}

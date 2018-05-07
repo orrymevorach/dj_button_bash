@@ -1,0 +1,145 @@
+@media (max-width: 1090px) {
+    
+    /* Hiding Header Text outside of buttons container */
+    .header-text {
+        display: none;
+    }
+/* Hiding animation on resize */
+    .animation-container {
+        display: none;
+    }
+
+    /* Revealing Header text within buttons container */
+    .container-text {
+        display: block;
+        font-family: 'Hind', sans-serif;
+        text-shadow: 0px 0px 10px white;
+        color: white;
+        text-align: right;
+        font-size: 30px;
+        position: relative;
+        top: -10%;
+        margin: 0;
+    }
+
+    /* Resizing buttons container large */
+    .buttons-container-large {
+        height: 100vh;
+        position: relative;
+        bottom: 0;
+    }
+    
+    /* repositioning buttons container small */
+    .buttons-container-small {
+        position: absolute;
+        bottom: 1%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* rearranging buttons in a column formation */
+    .buttons-green,
+    .buttons-pink,
+    .buttons-orange,
+    .buttons-yellow,
+    .buttons-blue-bottom,
+    .buttons-blue-top {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    /* arranging columns in rows */
+    .buttons-container-small {
+        display: flex;
+    }
+
+    /* hiding the enter and shift buttons */
+    .special {
+        display: none;
+    }
+
+    /* removing margin between columns */
+    .top-row,
+    .middle-row,
+    .bottom-row,
+    .special {
+        margin-left: 0;
+    }
+    /* resizing buttons */
+    .button {
+        height: 80px;
+    }
+    
+    .square {
+        width: 80px;
+        margin: 10px;
+    }
+
+    /* hiding letter keys since no keyboard is used with tablet */
+    p:first-of-type {
+        display: none;
+    }
+
+
+    /* Styling Looping Icons inside buttons */
+    .drumloop img,
+    .guitarloop img,
+    .hihat img {
+        width: 60px;
+        display: inline-block;
+        opacity: 0.1;
+        margin-top: 10px;
+    }
+   
+    /* Adjusting text within buttons */
+    p:nth-child(2) {
+        margin-top: 20px;
+        font-size: 100px;
+        text-transform: uppercase;
+    }
+    
+    /* Hiding style lines */
+    p:nth-child(2):before {
+        display: none;
+    }
+}
+
+@media(max-width: 640px) {
+    
+    /* shrinking buttons */
+    .square {
+        margin: 5px;
+    }
+    /* shrinking header text */
+    .container-text {
+        font-size: 25px;
+        line-height: 1;
+    }
+}
+
+/* Continuously shrinking buttons */
+@media (max-width: 560px) {
+    .square {
+        width: 70px;
+        margin: 2px;
+    } 
+} 
+
+@media (max-width: 480px) {
+    .square {
+        width: 60px;
+    }
+}
+
+@media (max-width: 410px) {
+    .square {
+        width: 50px;
+    }
+}
+
+@media (max-width: 350px) {
+    .square {
+        margin: 8px 2px;
+        width: 30px;
+    }
+}
