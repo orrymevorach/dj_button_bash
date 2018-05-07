@@ -14,6 +14,11 @@ body {
     width: 100%;
 }
 
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 .header-text h1 {
     font-family: 'Hind', sans-serif;
     color: white;
@@ -24,15 +29,12 @@ body {
     text-shadow: 0px 0px 10px white;
 }
 
+/* Hiding the Container Text at Full Size. Will appear later on resize  */
 .container-text {
     display: none;
 }
 
-.wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
+/* Styling Container holding all the buttons */
 .buttons-container-large {
     position: absolute;
     bottom: 50px;
@@ -42,6 +44,7 @@ body {
     box-shadow: 0px 0px 10px 10px white;
 }
 
+/* Arranging buttons in a row */
 .top-row,
 .middle-row,
 .bottom-row,
@@ -55,6 +58,7 @@ body {
     display: flex;
 }
 
+/* Styling and arranging all buttons to look like a keyboard */
 .middle-row {
     margin-left: 20px;
 }
@@ -73,37 +77,79 @@ body {
     transition: 0.1s;
 }
 
+/* Delete Button */
 .delete {
     width: 80px;
 }
 
+/* Enter Button */
 .enter {
     width: 114px;
     height: 60px;
+    background-color: red;
 }
 
+/* Shift Button */
 .shift {
     width: 158px;
 }
 
-.space {
-    width: 425px;
-    margin-left: 315px;
-}
-
-.special {
-    background-color: red;
-}
-
+/* Styling Small Letters On Each Button */
 div p:first-child {
     margin: 0;
     padding: 3px 0 0 3px;
     color: rgba(0,0,0,0.3);
 }
 
+div p:nth-child(2) {
+    color: rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative;
+    padding-top: 13px;
+    font-size: 12px;
+
+}
+div p:nth-child(2):before {
+    content: '';
+    width: 40px;
+    border-top: 1px dashed rgba(0,0,0,0.2);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .drumloop {
     background: rgb(170,255,0);
 }
+.loop-icon {
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling Looping Icons inside buttons */
+.drumloop img,
+.guitarloop img,
+.hihat img {
+    width: 40px;
+    display: inline-block;
+    opacity: 0.1;
+    margin-top: -6px;
+}
+
+.applause {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.applause img {
+    width: 40px;
+    margin-left: -10px;
+}
+
+
+
 
 .guitarloop {
     background-color: rgb(255,0,170);
@@ -121,6 +167,7 @@ div p:first-child {
     background-color: yellow;
 }
 
+/* Styling Highlight Function for when button is pressed */
 .highlight {
     box-shadow: 0px 0px 10px 10px rgba(255,255,255,0.8);
     transform: scale(1.1);
@@ -193,15 +240,38 @@ div p:first-child {
         margin: 10px;
     }
 
-    p {
+    p:first-of-type {
         display: none;
     }
+
+    .loop-icon {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Styling Looping Icons inside buttons */
+    .drumloop img,
+    .guitarloop img,
+    .hihat img {
+        width: 60px;
+        display: inline-block;
+        opacity: 0.1;
+        margin-top: 10px;
+    }
    
+    p:nth-child(2) {
+        margin-top: 20px;
+        font-size: 100px;
+        text-transform: uppercase;
+    }
+
+    p:nth-child(2):before {
+        display: none;
+    }
 }
 
 @media(max-width: 640px) {
-    .button {
-    }
+    
     .square {
         margin: 5px;
     }
