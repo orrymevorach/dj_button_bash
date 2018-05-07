@@ -435,7 +435,7 @@ div p:nth-child(2):before {
 .animation-container {
   position: absolute;
   left: 0;
-  top: 26%; }
+  top: 33%; }
 
 @media (max-width: 1090px) {
   /* Hiding Header Text outside of buttons container */
