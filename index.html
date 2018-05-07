@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DJ Danny Pack</title>
+    <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <!-- Loading in jQuery -->
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src="tweetButton.js"></script>
+    
     <div class="wrapper"> <!-- Opening Wrapper to Center and Contain Buttons -->
+        <div class="header-text">
+            <h1>DJ Button Mash</h1>
+        </div>
+
         <div class="buttons-container-large"> <!-- Opening Buttons to Position at the Bottom -->
+            <div class="container-text">
+                <h1>DJ Button Mash</h1>
+            </div>
             <div class="buttons-container-small">
 
             
@@ -83,27 +93,27 @@
                 <div class="middle-row"> <!-- Oening Middle Row -->
                     <div class="buttons-orange">
                         <!-- Individual Drum Sounds -->
-                        <div class="button square drum-sounds bass">
+                        <div class="button square drum-sounds bass1">
                             <p>A</p>
                             <p></p>
                         </div>
-                        <div class="button square drum-sounds snare">
+                        <div class="button square drum-sounds bass2">
                             <p>S</p>
                             <p></p>
                         </div>
-                        <div class="button square drum-sounds">
+                        <div class="button square drum-sounds snare1">
                             <p>D</p>
                             <p></p>
                         </div>
-                        <div class="button square drum-sounds">
+                        <div class="button square drum-sounds snare2">
                             <p>F</p>
                             <p></p>
                         </div>
-                        <div class="button square drum-sounds">
+                        <div class="button square drum-sounds crash1">
                             <p>G</p>
                             <p></p>
                         </div>
-                        <div class="button square drum-sounds">
+                        <div class="button square drum-sounds crash2">
                             <p>H</p>
                             <p></p>
                         </div>
@@ -131,7 +141,7 @@
                             <p>'</p>
                             <p></p>
                         </div>
-                        <div class="button enter special">
+                        <div class="button enter special applause">
                             <p>ENTER</p>
                             <p></p>
                         </div>
@@ -176,11 +186,11 @@
                             <p>,</p>
                             <p></p>
                         </div>
-                        <div class="square button dj veil">
+                        <div class="square button dj corey">
                             <p>.</p>
                             <p></p>
                         </div>
-                        <div class="square button dj corey">
+                        <div class="square button dj veil">
                             <p>/</p>
                             <p></p>
                         </div>
@@ -191,13 +201,6 @@
                     </div> <!-- Closing Buttons Blue Bottom -->
                 </div> <!-- CLosing Bottom Row -->
             
-                <!-- Spacebar -->
-                <div class="bottom-special">
-                    <div class="space button applause special">
-                        <p>SPACE</p>
-                        <p></p>
-                    </div>
-                </div> <!-- Closing Spacebar -->
             </div> <!-- Closing Buttons Container Small -->
 
         </div> <!-- Closing Buttons Container Large -->
@@ -226,8 +229,12 @@
     <audio data-key="220" data-instrument="guitarloop6" src="Guitar_Loops/guitarloop8.mp3"></audio>
 
     <!-- Individual Drum Sounds -->
-    <audio data-key="65" data-instrument="bass" src="Kit_4_Electro/CYCdh_ElecK01-Kick02.wav"></audio>
-    <audio data-key="83" data-instrument="snare"src="Kit_4_Electro/CYCdh_ElecK01-Snr03.wav"></audio>
+    <audio data-key="65" data-instrument="bass1" src="Drum_Individual_Sounds/kick02.wav"></audio>
+    <audio data-key="83" data-instrument="bass2"src="Drum_Individual_Sounds/kick01.wav"></audio>
+    <audio data-key="68" data-instrument="snare1" src="Drum_Individual_Sounds/snare1.wav"></audio>
+    <audio data-key="70" data-instrument="snare2" src="Drum_Individual_Sounds/snare2.wav"></audio>
+    <audio data-key="71" data-instrument="crash1" src="Drum_Individual_Sounds/crash1.wav"></audio>
+    <audio data-key="72" data-instrument="crash2" src="Drum_Individual_Sounds/crash2.wav"></audio>
     <audio data-key="16" data-instrument="singlehihat" src="Drum_Individual_Sounds/singlehihat.wav"></audio>
 
     <!-- Hi Hat Loops -->
@@ -252,10 +259,10 @@
     <audio data-key="78" data-instrument="pinwheel" src="Sound_Effects/pinwheel.mp3"></audio>
     <audio data-key="77" data-instrument="scratch" src="Sound_Effects/scratch.mp3"></audio>
     <audio data-key="188" data-instrument="strike" src="Sound_Effects/strike.mp3"></audio>
-    <audio data-key="190" data-instrument="veil" src="Sound_Effects/veil.mp3"></audio>
-    <audio data-key="191" data-instrument="corey" src="Sound_Effects/corey.m4a"></audio>
+    <audio data-key="190" data-instrument="corey" src="Sound_Effects/corey.m4a"></audio>
+    <audio data-key="191" data-instrument="veil" src="Sound_Effects/veil.mp3"></audio>
     <!-- SPACEBAR -->
-    <audio data-key="32" data-instrument="applause" src="Sound_Effects/auditorium.mp3"></audio>
+    <audio data-key="13" data-instrument="applause" src="Sound_Effects/auditorium.mp3"></audio>
     
     
     
@@ -502,8 +509,8 @@
             }
 
             // auditorium clapping / space bar
-            if (e.which === 32) {
-                const auditorium = document.querySelector(`audio[data-key="32"]`);
+            if (e.which === 13) {
+                const auditorium = document.querySelector(`audio[data-key="13"]`);
                 if (auditorium.loop === false) {
                     auditorium.loop = true;
                     highlight();
@@ -588,34 +595,35 @@
              
         })
 
-        // $('.button').on('click', function(e){ 
-        //  // create a dynamic variable that gets the sound associated with each data-key
-        //  const selectedSound = document.querySelector(`.dl1`); 
-        //  console.log(selectedSound); 
-        //  // if button is clicked with no associated sound, do nothing.
-        //  if (!selectedSound) return; 
-        //  // rewinds each track as soon as it starts so it can be replayed immediately 
-        //  selectedSound.pause(); 
-        //  selectedSound.currentTime = 0; 
-        //  // create a variable that gets the data of the divs with the class instrument 
-        //  const instrument = $(selectedSound).data('instrument'); 
-        //  // creating a function so that when each key is hit, toggle the class 'highlight' 
-        //  const highlight = function () { 
-        //      $(`.${instrument}`).toggleClass("highlight");
-        //     }; 
-        //     highlight(); 
-        //     // set a timeout function for the highlight after 150 milliseconds 
-        //     setTimeout(function
-        //     () { highlight(); }, 150) 
-        //     return selectedSound.play();
-        // });
+        $('.button').on('click', function(e){ 
+         // create a dynamic variable that gets the sound associated with each data-key
+         const selectedSound = document.querySelector(`.dl1`); 
+         console.log(selectedSound); 
+         // if button is clicked with no associated sound, do nothing.
+         if (!selectedSound) return; 
+         // rewinds each track as soon as it starts so it can be replayed immediately 
+         selectedSound.pause(); 
+         selectedSound.currentTime = 0; 
+         // create a variable that gets the data of the divs with the class instrument 
+         const instrument = $(selectedSound).data('instrument'); 
+         // creating a function so that when each key is hit, toggle the class 'highlight' 
+         const highlight = function () { 
+             $(`.${instrument}`).toggleClass("highlight");
+            }; 
+            highlight(); 
+            // set a timeout function for the highlight after 150 milliseconds 
+            setTimeout(function
+            () { highlight(); }, 150) 
+            return selectedSound.play();
+        });
 
-    //    $('.button').on('click', function(e){
-    //        const selectedSound = document.querySelector(`audio[data-key='${e.which}']`)
-    //        console.log(selectedSound);
-    //        return selectedSound.play()
+       $('.button').on('click', function(e){
+           const selectedSound = document.querySelector(`audio[data-key='${e.which}']`)
            
-    //    }) 
+           console.log(selectedSound);
+        //    return selectedSound.play()
+           
+       }) 
 
     }); // Closing the document ready
         
