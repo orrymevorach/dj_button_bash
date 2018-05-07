@@ -12,23 +12,36 @@
     
     <!-- Loading in jQuery -->
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
-    <script src="tweetButton.js"></script>
     
     <div class="wrapper"> <!-- Opening Wrapper to Center and Contain Buttons -->
         <div class="header-text">
             <h1>DJ Button Mash</h1>
         </div>
 
+        <!-- Animation bars -->
+        <div class="animation-container">
+            <div class="animation animation-green"></div>
+            <div class="animation animation-pink"></div>
+            <div class="animation animation-orange"></div>
+            <div class="animation animation-blue-left"></div>
+            <div class="animation animation-yellow"></div>
+            <div class="animation animation-blue-right"></div>
+        </div>
+
         <div class="buttons-container-large"> <!-- Opening Buttons to Position at the Bottom -->
+            
+            <!-- Header Text -->
             <div class="container-text">
                 <h1>DJ Button Mash</h1>
             </div>
+
+            <!-- Opening Buttons Container Small -->
             <div class="buttons-container-small">
             
                 <div class="top-row"> <!-- Opening Top Row -->
                     <!-- Drum Loops -->
                     <div class="buttons-green">
-                        <div class="square button drumloop drumloop1">
+                        <div class="square button drumloop drumloop1" data-instrument="drumloop1">
                             <p>Q</p>
                             <div class="loop-icon">
                                 <img src="images/loop.png" alt="Loop Icon">
@@ -241,7 +254,7 @@
     <!-- Drum Loops 
         Q W E R T Y U 
      -->
-    <audio data-key="81" data-instrument="drumloop1" class="dl1" src="Drum_Loops/drumloop1.mp3"></audio>
+    <audio data-key="81" data-instrument="drumloop1" src="Drum_Loops/drumloop1.mp3"></audio>
     <audio data-key="87" data-instrument="drumloop2" src="Drum_Loops/drumloop2.mp3"></audio>
     <audio data-key="69" data-instrument="drumloop3" src="Drum_Loops/drumloop3.mp3"></audio>
     <audio data-key="82" data-instrument="drumloop4" src="Drum_Loops/drumloop4.mp3"></audio>
@@ -327,7 +340,7 @@
             setTimeout(function() {
                 highlight();
             },150) 
-            
+
             // if button is pressed and loop === false, loop will be set to = true
             // else (if) loop is false, leave it at false
             // set time on each track to 60 seconds which is longer than any track so that it doesnt repeat itself
@@ -623,38 +636,7 @@
 
             // plays the selected sound when the function is called
             return selectedSound.play();
-             
         })
-
-        $('.button').on('click', function(e){ 
-         // create a dynamic variable that gets the sound associated with each data-key
-         const selectedSound = document.querySelector(`.dl1`); 
-         console.log(selectedSound); 
-         // if button is clicked with no associated sound, do nothing.
-         if (!selectedSound) return; 
-         // rewinds each track as soon as it starts so it can be replayed immediately 
-         selectedSound.pause(); 
-         selectedSound.currentTime = 0; 
-         // create a variable that gets the data of the divs with the class instrument 
-         const instrument = $(selectedSound).data('instrument'); 
-         // creating a function so that when each key is hit, toggle the class 'highlight' 
-         const highlight = function () { 
-             $(`.${instrument}`).toggleClass("highlight");
-            }; 
-            highlight(); 
-            // set a timeout function for the highlight after 150 milliseconds 
-            setTimeout(function
-            () { highlight(); }, 150) 
-            return selectedSound.play();
-        });
-
-       $('.button').on('click', function(e){
-           const selectedSound = document.querySelector(`audio[data-key='${e.which}']`)
-           
-           console.log(selectedSound);
-        //    return selectedSound.play()
-           
-       }) 
 
     }); // Closing the document ready
         
