@@ -19,7 +19,7 @@ body {
     font-size: 100px;
     text-align: center;
     position: relative;
-    top: 5%;
+    top: -70px;
     text-shadow: 0px 0px 10px white;
 }
 
@@ -31,10 +31,11 @@ body {
 /* Styling Container holding all the buttons */
 .buttons-container-large {
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     background: rgba(0,0,0,0.7);
     padding: 50px;
-    margin: 0 10px;
     box-shadow: 0px 0px 10px 10px white;
 }
 
@@ -95,37 +96,53 @@ div p:first-child {
     color: rgba(0,0,0,0.3);
 }
 
+
+// bottom text
 div p:nth-child(2) {
     color: rgba(0,0,0,0.3);
     text-align: center;
     position: relative;
-    padding-top: 13px;
+    top: 13px;
     font-size: 12px;
 
 }
+
+// dashed line
 div p:nth-child(2):before {
     content: '';
     width: 40px;
-    border-top: 1px dashed rgba(0,0,0,0.2);
+    border-top: 1px dashed rgba(0,0,0,0.3);
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
 }
 
+// position text for looping buttons
+.drumloop p:nth-child(2),
+.guitarloop p:nth-child(2),
+.hihat p:nth-child(2) {
+    top: -20px;
+    padding: 0;
+}
+
+// position looping icon
 .loop-icon {
-    display: flex;
-    justify-content: center;
+    text-align: right;
+    display: block;
 }
 
 /* Styling Looping Icons inside buttons */
 .drumloop img,
 .guitarloop img,
 .hihat img {
-    width: 40px;
+    width: 28px;
     display: inline-block;
-    opacity: 0.1;
-    margin-top: -6px;
+    opacity: 0.3;
+    margin: 0 4px 0 0;
+    padding: 0;
+    position: relative;
+    top: -20px;
 }
 
 .applause {
@@ -168,5 +185,7 @@ div p:nth-child(2):before {
 .animation-container {
     position: absolute;
     left: 0;
-    top: 33%;
+    bottom: 100%;
+    display: flex;
+    transform: scaleY(-1);
 }

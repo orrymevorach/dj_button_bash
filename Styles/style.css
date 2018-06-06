@@ -133,140 +133,176 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 .animation {
-  height: 20px;
+  width: 20px;
   opacity: 0.8; }
 
 .animation-green {
   background: #aaff00;
-  width: 220px;
+  height: 220px;
   -webkit-animation: green-bars 3s linear infinite;
   animation: green-bars 3s linear infinite; }
 
 .animation-pink {
   background-color: #ff00aa;
-  width: 140px;
+  height: 140px;
   -webkit-animation: pink-bars 3s linear infinite;
   animation: pink-bars 3s linear infinite; }
 
 .animation-orange {
   background-color: #ffaa00;
-  width: 140px;
+  height: 140px;
   -webkit-animation: orange-bars 3s linear infinite;
   animation: orange-bars 3s linear infinite; }
 
 .animation-blue-left {
   background-color: #00aaff;
-  width: 100px;
+  height: 100px;
   -webkit-animation: blue-left-bars 3s linear infinite;
   animation: blue-left-bars 3s linear infinite; }
 
 .animation-yellow {
   background-color: yellow;
-  width: 60px;
+  height: 60px;
   -webkit-animation: yellow-bars 3s linear infinite;
   animation: yellow-bars 3s linear infinite; }
 
 .animation-blue-right {
   background-color: #00aaff;
-  width: 140px;
+  height: 140px;
+  -webkit-animation: blue-right-bars 3s linear infinite;
+  animation: blue-right-bars 3s linear infinite; }
+
+.animation-green2 {
+  background: #aaff00;
+  height: 220px;
+  -webkit-animation: green-bars 3s linear infinite;
+  animation: green-bars 3s linear infinite; }
+
+.animation-pink2 {
+  background-color: #ff00aa;
+  height: 140px;
+  -webkit-animation: pink-bars 3s linear infinite;
+  animation: pink-bars 3s linear infinite; }
+
+.animation-orange2 {
+  background-color: #ffaa00;
+  height: 140px;
+  -webkit-animation: orange-bars 3s linear infinite;
+  animation: orange-bars 3s linear infinite; }
+
+.animation-blue-left2 {
+  background-color: #00aaff;
+  height: 100px;
+  -webkit-animation: blue-left-bars 3s linear infinite;
+  animation: blue-left-bars 3s linear infinite; }
+
+.animation-yellow2 {
+  background-color: yellow;
+  height: 60px;
+  -webkit-animation: yellow-bars 3s linear infinite;
+  animation: yellow-bars 3s linear infinite; }
+
+.animation-blue-right2 {
+  background-color: #00aaff;
+  height: 140px;
   -webkit-animation: blue-right-bars 3s linear infinite;
   animation: blue-right-bars 3s linear infinite; }
 
 @-webkit-keyframes green-bars {
   0% {
-    width: 220px; }
+    height: 90px; }
   50% {
-    width: 100px; }
+    height: 30px; }
   100% {
-    width: 220px; } }
+    height: 90px; } }
 
 @keyframes green-bars {
   0% {
-    width: 220px; }
+    height: 90px; }
   50% {
-    width: 100px; }
+    height: 30px; }
   100% {
-    width: 220px; } }
+    height: 90px; } }
 
 @-webkit-keyframes pink-bars {
   0% {
-    width: 140px; }
+    height: 70px; }
   50% {
-    width: 220px; }
+    height: 20px; }
   100% {
-    width: 140px; } }
+    height: 70px; } }
 
 @keyframes pink-bars {
   0% {
-    width: 140px; }
+    height: 70px; }
   50% {
-    width: 220px; }
+    height: 20px; }
   100% {
-    width: 140px; } }
+    height: 70px; } }
 
 @-webkit-keyframes orange-bars {
   0% {
-    width: 140px; }
+    height: 60px; }
   50% {
-    width: 80px; }
+    height: 40px; }
   100% {
-    width: 140px; } }
+    height: 60px; } }
 
 @keyframes orange-bars {
   0% {
-    width: 140px; }
+    height: 60px; }
   50% {
-    width: 80px; }
+    height: 40px; }
   100% {
-    width: 140px; } }
+    height: 60px; } }
 
 @-webkit-keyframes blue-left-bars {
   0% {
-    width: 100px; }
+    height: 70px; }
   50% {
-    width: 130px; }
+    height: 60px; }
   100% {
-    width: 100px; } }
+    height: 70px; } }
 
 @keyframes blue-left-bars {
   0% {
-    width: 100px; }
+    height: 70px; }
   50% {
-    width: 130px; }
+    height: 60px; }
   100% {
-    width: 100px; } }
+    height: 70px; } }
 
 @-webkit-keyframes yellow-bars {
   0% {
-    width: 60px; }
+    height: 20px; }
   50% {
-    width: 220px; }
+    height: 80px; }
   100% {
-    width: 60px; } }
+    height: 20px; } }
 
 @keyframes yellow-bars {
   0% {
-    width: 60px; }
+    height: 20px; }
   50% {
-    width: 220px; }
+    height: 80px; }
   100% {
-    width: 60px; } }
+    height: 20px; } }
 
 @-webkit-keyframes blue-right-bars {
   0% {
-    width: 120px; }
+    height: 80px; }
   50% {
-    width: 180px; }
+    height: 70px; }
   100% {
-    width: 120px; } }
+    height: 80px; } }
 
 @keyframes blue-right-bars {
   0% {
-    width: 120px; }
+    height: 80px; }
   50% {
-    width: 180px; }
+    height: 70px; }
   100% {
-    width: 120px; } }
+    height: 80px; } }
 
 body {
   font-family: sans-serif;
@@ -290,7 +326,7 @@ body {
   font-size: 100px;
   text-align: center;
   position: relative;
-  top: 5%;
+  top: -70px;
   text-shadow: 0px 0px 10px white; }
 
 /* Hiding the Container Text at Full Size. Will appear later on resize  */
@@ -300,10 +336,13 @@ body {
 /* Styling Container holding all the buttons */
 .buttons-container-large {
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.7);
   padding: 50px;
-  margin: 0 10px;
   -webkit-box-shadow: 0px 0px 10px 10px white;
   box-shadow: 0px 0px 10px 10px white; }
 
@@ -363,13 +402,13 @@ div p:nth-child(2) {
   color: rgba(0, 0, 0, 0.3);
   text-align: center;
   position: relative;
-  padding-top: 13px;
+  top: 13px;
   font-size: 12px; }
 
 div p:nth-child(2):before {
   content: '';
   width: 40px;
-  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  border-top: 1px dashed rgba(0, 0, 0, 0.3);
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -377,22 +416,27 @@ div p:nth-child(2):before {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%); }
 
+.drumloop p:nth-child(2),
+.guitarloop p:nth-child(2),
+.hihat p:nth-child(2) {
+  top: -20px;
+  padding: 0; }
+
 .loop-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  text-align: right;
+  display: block; }
 
 /* Styling Looping Icons inside buttons */
 .drumloop img,
 .guitarloop img,
 .hihat img {
-  width: 40px;
+  width: 28px;
   display: inline-block;
-  opacity: 0.1;
-  margin-top: -6px; }
+  opacity: 0.3;
+  margin: 0 4px 0 0;
+  padding: 0;
+  position: relative;
+  top: -20px; }
 
 .applause {
   display: -webkit-box;
@@ -435,9 +479,54 @@ div p:nth-child(2):before {
 .animation-container {
   position: absolute;
   left: 0;
-  top: 33%; }
+  bottom: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  transform: scaleY(-1); }
 
 @media (max-width: 1090px) {
+  .header-text h1 {
+    top: -30px; }
+  /* resizing buttons */
+  .button {
+    height: 48px; }
+  .square {
+    width: 48px;
+    margin: 5px; }
+  .middle-row {
+    margin-left: 10px; }
+  .bottom-row {
+    margin-left: 30px; }
+  /* Shrinking Enter Button */
+  .enter {
+    width: 93px; }
+  /* Shrinking Shift Button */
+  .shift {
+    width: 130px; }
+  .buttons-container-large {
+    padding: 20px; }
+  .drumloop img,
+  .guitarloop img,
+  .hihat img {
+    width: 20px; }
+  .drumloop p:nth-child(2),
+  .guitarloop p:nth-child(2),
+  .hihat p:nth-child(2) {
+    top: -22px; }
+  div p:nth-child(2) {
+    top: 0; }
+  .animation-container .animation-green2,
+  .animation-container .animation-orange2,
+  .animation-container .animation-yellow2,
+  .animation-container .animation-pink2,
+  .animation-container .animation-blue-left2,
+  .animation-container .animation-blue-right2 {
+    display: none; } }
+
+@media (max-width: 830px) {
   /* Hiding Header Text outside of buttons container */
   .header-text {
     display: none; }
@@ -450,10 +539,9 @@ div p:nth-child(2):before {
     font-family: 'Hind', sans-serif;
     text-shadow: 0px 0px 10px white;
     color: white;
-    text-align: right;
-    font-size: 30px;
+    text-align: center;
+    font-size: 25px;
     position: relative;
-    top: -10%;
     margin: 0; }
   /* Resizing buttons container large */
   .buttons-container-large {
@@ -495,57 +583,45 @@ div p:nth-child(2):before {
   .middle-row,
   .bottom-row,
   .special {
-    margin-left: 0; }
-  /* resizing buttons */
+    margin-left: 0px; }
+  /* shrinking button sizes */
   .button {
-    height: 80px; }
+    height: 50px;
+    margin: 5px 10px; }
   .square {
-    width: 80px;
-    margin: 10px; }
+    width: 50px; }
   /* hiding letter keys since no keyboard is used with tablet */
-  p:first-of-type {
-    display: none; }
+  div p:nth-child(2) {
+    position: relative;
+    top: 5px;
+    font-size: 10px; }
+  div p:nth-child(2),
+  div p:nth-child(2):before {
+    color: rgba(0, 0, 0, 0.5); }
+  .drumloop p:nth-child(2),
+  .guitarloop p:nth-child(2),
+  .hihat p:nth-child(2) {
+    top: -20px;
+    left: -2px; }
+  .loop-icon {
+    position: relative;
+    top: 0px;
+    right: -2px; } }
+
+@media (max-width: 450px) {
+  .container-text {
+    font-size: 20px; }
+  /* shrinking buttons */
+  .button {
+    height: 44px; }
+  .square {
+    width: 40px; }
   /* Styling Looping Icons inside buttons */
   .drumloop img,
   .guitarloop img,
   .hihat img {
-    width: 60px;
-    display: inline-block;
-    opacity: 0.1;
-    margin-top: 10px; }
-  /* Adjusting text within buttons */
-  p:nth-child(2) {
-    margin-top: 20px;
-    font-size: 100px;
-    text-transform: uppercase; }
-  /* Hiding style lines */
-  p:nth-child(2):before {
-    display: none; } }
-
-@media (max-width: 640px) {
-  /* shrinking buttons */
-  .square {
-    margin: 5px; }
-  /* shrinking header text */
-  .container-text {
-    font-size: 25px;
-    line-height: 1; } }
-
-/* Continuously shrinking buttons */
-@media (max-width: 560px) {
-  .square {
-    width: 70px;
-    margin: 2px; } }
-
-@media (max-width: 480px) {
-  .square {
-    width: 60px; } }
-
-@media (max-width: 410px) {
-  .square {
-    width: 50px; } }
-
-@media (max-width: 350px) {
-  .square {
-    margin: 8px 2px;
-    width: 30px; } }
+    width: 15px; }
+  div p:nth-child(2) {
+    position: relative;
+    top: 0px;
+    font-size: 10px; } }
