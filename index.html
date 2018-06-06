@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DJ Danny Pack</title>
+    <title>DJ Button Bash</title>
     <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
     <link rel="stylesheet" href="Styles/style.css">
+    <link rel="icon" href="images/record-favicon.png">
 </head>
 <body>
     
@@ -15,14 +16,14 @@
     
     <div class="wrapper"> <!-- Opening Wrapper to Center and Contain Buttons -->
         <div class="header-text">
-            <h1>DJ Button Mash</h1>
+            <h1>DJ Button Bash</h1>
         </div>
 
         <div class="buttons-container-large"> <!-- Opening Buttons to Position at the Bottom -->
             
             <!-- Header Text -->
             <div class="container-text">
-                <h1>DJ Button Mash</h1>
+                <h1>DJ Button Bash</h1>
             </div>
 
             <!-- Opening Buttons Container Small -->
@@ -383,8 +384,11 @@
             
             // adds the class of animation to all elements with the class of animations
             $(animatedClass).addClass('animation')
+        }
 
-            // this function gets called on the keydown event listener
+        function animation(e) {
+            const selectedSound = document.querySelector(`audio[data-key="${e.which}"]`);
+            console.log(selectedSound)
         }
         
         $(document).on('keydown', function(e){
@@ -412,8 +416,6 @@
             setTimeout(function() {
                 highlight();
             },150) 
-
-            
             
             function checkLoop(el) {
                 
@@ -438,10 +440,12 @@
                 }
             }
 
-            triggerAnimations();
+            // triggerAnimations();
             checkLoop(selectedSound);
             return selectedSound.play();
         })
+
+        
 
         // $(window).resize(function() {
         //     checkMobileSound(700);
