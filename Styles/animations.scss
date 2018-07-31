@@ -1,67 +1,94 @@
 .animation {
-    width: 20px;
     opacity: 0.8;
+}
+
+.highlightBars {
+    box-shadow: 0 0 10px black;;
 }
 .animation-green {
     background: rgb(170,255,0);
     height: 220px;
+    width: 20px;
+    opacity: 0;
     animation: green-bars 3s linear infinite;
 }
 .animation-pink {
     background-color: rgb(255,0,170);
     height: 140px;
+    width: 20px;
+    opacity: 0;
     animation: pink-bars 3s linear infinite;
 }
 
 .animation-orange {
     background-color: rgb(255,170,0);
     height: 140px;
+    width: 20px;
+    opacity: 0;
     animation: orange-bars 3s linear infinite;
 }
 .animation-blue-left {
     background-color: rgb(0,170,255);
     height: 100px;
+    width: 20px;
+    opacity: 0;
     animation: blue-left-bars 3s linear infinite;
 }
 .animation-yellow {
     background-color: yellow;
     height: 60px;
+    width: 20px;
+    opacity: 0;
     animation: yellow-bars 3s linear infinite;
 }
 .animation-blue-right {
     background-color: rgb(0,170,255);
     height: 140px;
+    width: 20px;
+    opacity: 0;
     animation: blue-right-bars 3s linear infinite;
 }
 .animation-green2 {
     background: rgb(170,255,0);
     height: 220px;
+    width: 20px;
+    opacity: 0;
     animation: green-bars 3s linear infinite;
 }
 .animation-pink2 {
     background-color: rgb(255,0,170);
     height: 140px;
+    width: 20px;
+    opacity: 0;
     animation: pink-bars 3s linear infinite;
 }
 
 .animation-orange2 {
     background-color: rgb(255,170,0);
     height: 140px;
+    width: 20px;
+    opacity: 0;
     animation: orange-bars 3s linear infinite;
 }
 .animation-blue-left2 {
     background-color: rgb(0,170,255);
     height: 100px;
+    width: 20px;
+    opacity: 0;
     animation: blue-left-bars 3s linear infinite;
 }
 .animation-yellow2 {
     background-color: yellow;
     height: 60px;
+    width: 20px;
+    opacity: 0;
     animation: yellow-bars 3s linear infinite;
 }
 .animation-blue-right2 {
     background-color: rgb(0,170,255);
     height: 140px;
+    width: 20px;
+    opacity: 0;
     animation: blue-right-bars 3s linear infinite;
 }
 

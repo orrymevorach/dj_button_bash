@@ -88,19 +88,23 @@
         font-size: 25px;
         position: relative;
         margin: 0;
+        @media (max-height: 570px) {
+            top: -15px;
+        }
     }
 
     /* Resizing buttons container large */
     .buttons-container-large {
         height: 100vh;
         position: relative;
-        bottom: 0;
+        bottom: 0px;
     }
     
     /* repositioning buttons container small */
     .buttons-container-small {
+        display: flex;
         position: absolute;
-        bottom: 1%;
+        bottom: 4%;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -114,11 +118,6 @@
     .buttons-blue-top {
         flex-direction: column;
         justify-content: flex-end;
-    }
-
-    /* arranging columns in rows */
-    .buttons-container-small {
-        display: flex;
     }
 
     /* hiding the enter and shift buttons */
@@ -171,12 +170,25 @@
         top: 0px;
         right: -2px;
     }
+    
+    // moving footer up top, shrinking box size
+    footer {
+        top: 0;
+        height: 30px;
+
+    }
+    // footer text 
+    h3 {
+        font-size: 10px;
+        padding-top: 0;
+    }
 
 }
 
 @media (max-width: 450px) {
     .container-text {
         font-size: 20px;
+        top: 30px;
     }
     
     /* shrinking buttons */

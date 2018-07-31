@@ -1,7 +1,22 @@
+	.equalizer {
+	  position: absolute;
+        top: -99px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+	}
+	 
+	.equalizer_bar { float: left; }
+	 
+	.equalizer_bar_component {
+	  float: left;
+	  width: 100%;
+	}
+
 body {
     font-family: sans-serif;
     background-color: black;
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.0)), url(../images/audience.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.0)), url(../assets/images/audience.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -21,6 +36,9 @@ body {
     position: relative;
     top: -70px;
     text-shadow: 0px 0px 10px white;
+    @media (min-height: 600px) {
+        top: 0;
+    }
 }
 
 /* Hiding the Container Text at Full Size. Will appear later on resize  */
@@ -31,7 +49,7 @@ body {
 /* Styling Container holding all the buttons */
 .buttons-container-large {
     position: absolute;
-    bottom: 20px;
+    bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0,0,0,0.7);
@@ -189,3 +207,26 @@ div p:nth-child(2):before {
     display: flex;
     transform: scaleY(-1);
 }
+
+// Formatting Footer
+footer {
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+h3 {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 7px;
+}
+a {
+    text-decoration: none;
+    text-decoration: underline;
+    color: white;
+}
+
