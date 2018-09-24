@@ -2,6 +2,7 @@ const app = {};
 
 // a variable that selected all the colored bars with the class of animation
 const animatedClass = $('.animations');
+let counter = 0;
 
 // a function that highlights the button when pressed
 app.highlight = function(sound) {
@@ -24,9 +25,11 @@ app.checkLoop = function(selectedAudio, instrumentDiv) {
     // a variable that stores the attributes of an element with the data-attribute data-hasLoop
     const hasLoop = $(selectedAudio).attr('data-hasLoop');
     const noLoop = $(selectedAudio).attr('data-noLoop');
+    const endOfTrack = selectedAudio.duration
 
     // looping butons that are not yet playing
     if (hasLoop && selectedAudio.loop === false) {
+        counter++;
         selectedAudio.loop = true;
         app.highlight(`${instrumentDiv}`);
         if ($(window).width() >= 830) {
@@ -35,13 +38,14 @@ app.checkLoop = function(selectedAudio, instrumentDiv) {
     }
     // looping buttons that are already playing
     else if (hasLoop && selectedAudio.loop === true) {
+        counter--;
         selectedAudio.loop = false;
         selectedAudio.pause();
-        selectedAudio.currentTime = 60;
+        selectedAudio.currentTime = endOfTrack;
         setTimeout(() => {
             app.highlight(`${instrumentDiv}`);
         }, 0)
-        if ($(window).width() >= 830) {
+        if ($(window).width() >= 830 && counter === 0) {
             app.removeAllAnimations();
         }
     }
@@ -60,6 +64,7 @@ app.checkLoop = function(selectedAudio, instrumentDiv) {
             $(animatedClass).removeClass('highlightBars')
         }, 150)
     }
+    
 }
 
 // a function that listens for each keypress, plays the associated sound, adds the CSS class of 'highlight', and triggers the sound bars animation
