@@ -2,6 +2,8 @@ const app = {};
 
 // a variable that selected all the colored bars with the class of animation
 const animatedClass = $('.animations');
+
+// a counter to track active loop tracks and activate//deactivate animations when necessary
 let counter = 0;
 
 // a function that highlights the button when pressed
